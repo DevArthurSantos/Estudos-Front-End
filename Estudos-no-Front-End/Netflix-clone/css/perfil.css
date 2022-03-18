@@ -1,0 +1,66 @@
+#netflixHomeSection{
+    height: 100vh;
+    width: 100%;
+    background-color: #070700;
+    position: fixed;
+}
+#contienerPerfil{
+    margin-top: 10px;
+    color: #fcfcfcfc;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#perfils{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-flow: row wrap;
+}
+.perfilsLogo{
+    width: 10rem;
+    margin: 1rem;
+}
+.perfilsLogo img{
+    width: 100%;
+    height: 100%;
+}
+#perfilAtual{
+    margin-top: 25px;
+    border: 1px solid #fcfcfcfc;
+}
+#perfilAtual h3{
+    margin-top: 5;
+    margin: 10px;
+}
+@media (max-width: 570px){
+    .perfilsLogo{
+        width: 7rem;
+        margin: 1rem;
+    }
+}
+@media (max-width: 450px){
+    .perfilsLogo{
+        width: 5rem;
+        margin: 1rem;
+    }
+    #perfilAtual{
+        margin-top: 25px;
+    }
+    #contienerPerfil h3{
+        font-size: .6rem;
+    }
+    #contienerPerfil h1{
+        font-size: 1rem;
+    }
+    #contienerPerfil legend{
+        font-size: .7rem;
+    }
+}

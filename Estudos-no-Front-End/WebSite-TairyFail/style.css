@@ -1,0 +1,441 @@
+/* CONFIGURAÇÕES */
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+  background-color: #a55c1b;
+  background-image: linear-gradient(315deg, #a55c1b 0%, #000000 82%);
+  background-size: cover;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #ffa500;
+  text-decoration: none;
+  cursor: pointer;
+}
+#play {
+  color: white;
+}
+.esconder {
+  display: none;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* HEADER-LOGO */
+.cabecalho-logo {
+  height: 45px;
+}
+#menu{
+  align-self: center;
+  font-size: 1.7rem;
+}
+#menu1,#menu2,#menu3,#menu4,#play{
+  font-size: 2rem;
+  margin: 18px;
+}
+#btn-mobile {
+  display: none;
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+}
+#menulayer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+}
+/* HEADER-MENU */
+.cabecalho {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 0.4px solid white;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+.cabecalho-menu-item {
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* MAIN-SOBRE */
+.conteudo {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(870px, 1fr));
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.conteudo-principal-escrito-titulo {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 6.4rem;
+  color: #fff2e7;
+}
+.conteudo-principal-escrito-paragrafo {
+  font-family: "Sarala", sans-serif;
+  font-weight: 450;
+  font-size: 1.7rem;
+  color: #ecd6c4;
+  width: 600px;
+  height: 300px;
+}
+#legenda-conteudo {
+  font-family: "Sarala", sans-serif;
+  font-weight: 450;
+  font-size: 1.7rem;
+  color: #ecd6c4;
+  width: 600px;
+  height: 300px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+#span-conteudo-pve {
+  border-top: 0.4px solid white;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#legenda-conteudo-pve {
+  padding-bottom: 15px;
+}
+.conteudo-principal-escrito-botao {
+  background-color: #fff2e7;
+  width: 150px;
+  height: 50px;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.conteudo-principal-img {
+  height: 230px;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* MAIN-CONTEUDOS */
+.skills {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  color: ECD6C4;
+}
+.skills-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.skill-bar {
+  height: 5px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #ffa500;
+}
+.skill-per {
+  height: 5px;
+  background: #ffa500;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: black;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 99, 71, 0);
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+}
+
+@keyframes fillBar {
+  form {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* MAIN-STAFF */
+.staff {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: center;
+}
+.staff-list {
+  display: flex;
+  flex-direction: column;
+}
+.conteudo-principal-escrito-titulo-staff {
+  padding-top: 50px;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  color: #fff2e7;
+}
+.comentario-staff {
+  margin-right: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.fundadores-officiers {
+  font-size: 1.7rem;
+}
+.fundadores-officiers-lista {
+  border-left: 0.4px solid white;
+  font-size: 1.4rem;
+  padding-left: 20px;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* MAIN-CONTATOS */
+.contatos-guilda-span {
+  border-top: 0.4px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+.contatos-guilda-discord {
+  padding-bottom: 5px;
+}
+.contatos-guilda-yt-jd {
+}
+
+.contatos-guilda-yt-md {
+}
+.contatos-guilda-flex {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  gap: 20px;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* FLOTTER-RODAPE */
+.rodape-bord {
+  margin-left: 42%;
+  margin-right: 42%;
+  border-top: 0.4px solid white;
+  padding-top: 1rem;
+}
+.rodape {
+  padding-top: 6rem;
+  display: block;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* FLOOTER-Tairy Fail */
+.rodape-nome {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 4.8rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #ffa500;
+  display: flex;
+  justify-content: space-around;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#copyright{
+  display: flex;
+  justify-content: center;
+  opacity: 50%;
+  padding-top: 10px;
+  font-family: "Righteous",;
+  font-weight: 400;
+  color: White;
+}
+/* RESPONSIVIDADE */
+@media (max-width: 915px) {
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+  }
+  .rodape {
+    padding-top: 5rem;
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  .conteudo-principal,
+  .conteudo-principal-escrito,
+  .conteudo-principal-escrito-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .conteudo-principal-escrito-paragrafo {
+    max-width: 500px;
+    padding-bottom: 38rem;
+  }
+  .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+  .conteudo-principal-img {
+    order: -1;
+  }
+  .rodape-bord {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 1rem;
+  }
+}
+@media (max-width: 705px) {
+  #legenda-conteudo {
+    width: 500px;
+}
+}
+@media (max-width: 600px) {
+  #btn-mobile {
+    display: block;
+    margin: 0 auto;  
+  }
+  .hmtl {
+    font-size: 50%;
+  }
+  .conteudo-principal-escrito-titulo {
+    font-size: 2.2rem;
+    padding-top: 1rem;
+  }
+  .conteudo-principal-img {
+    padding-top: 1rem;
+  }
+  .conteudo-principal-escrito-paragrafo {
+    max-width: 320px;
+    padding-bottom: 53rem;
+  }
+  .cabecalho-logo
+  {
+  margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  justify-self: center; 
+  width: 50px;
+  height: 50px; 
+  }
+#menulayer{
+  display: block;
+}
+  #menu {
+    display: none;
+  }
+  #nav.ativo #menu{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  #menu1,#menu2,#menu3,#menu4,#play{
+    font-size: 2rem;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .rodape-bord {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 1rem;
+  }
+  #legenda-conteudo {
+    width: 250px;
+}
+}
+@media (max-width: 300px) {
+  .hmtl {
+    font-size: 50%;
+  }
+  .conteudo-principal-escrito-titulo {
+    font-size: 1rem;
+    padding-top: 2rem;
+  }
+  .conteudo-principal-escrito-paragrafo {
+    max-width: 400px;
+    padding-bottom: 48rem;
+  }
+  .rodape-bord {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 1rem;
+  }
+}

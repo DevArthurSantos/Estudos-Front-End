@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Facebook</title>
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <img class="logo" src="facebook.svg" alt="Facebook">
+      <h2 id="esconder">O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</h2>
+    </div>
+    <div>
+      <form>
+        <input type="text" placeholder="Email ou telefone">
+        <input type="password" placeholder="Senha">
+        <button class="entrar">Entrar</button>
+        <a href="#">Esqueceu a senha?</a>
+        <button class="criar-conta">Criar nova conta</button>
+      </form>
+      <p id="esconder"><a href="#">Criar uma Página</a> para uma celebridade, banda ou empresa.</p>
+    </div>
+  </div>
+  <footer>
+   <div id="conteiner-footer">
+    <div id="idiomas">
+     <label Class="item-footer">Português - BR</label>
+      <label Class="item-footer">Português - PT</label>
+      <label Class="item-footer">English</label>
+      <label Class="item-footer">Francês</label>
+      <label Class="item-footer">Alemão</label>
+      <label Class="item-footer">Japonês</label>
+      <label Class="item-footer">Chinês</label>
+      <label Class="item-footer">Coreano</label>
+      <label Class="item-footer">Bahiano</label>
+    </div>
+    <hr id="idiomas-item-footer"/>
+    <div id="categoria">
+      <label Class="item-footer">Arthur dos Santos</label>
+      <label Class="item-footer">Clone Facebook</label>
+      <label Class="item-footer">Meu portifólio</label>
+      <label Class="item-footer">GitHub</label>
+      <label Class="item-footer">LinkedIn : DevArthurSantos</label>
+      <label Class="item-footer">Carros</label>
+      <label Class="item-footer">Locais</label>
+      <label Class="item-footer">Jogos</label>
+      <label Class="item-footer">Facebook</label>
+      <label Class="item-footer">Facebook lite</label>
+      <label Class="item-footer">Motos</label>
+      <label Class="item-footer">Gta V</label>
+      <label Class="item-footer">Html</label>
+      <label Class="item-footer">Css</label>
+      <label Class="item-footer">JavaScript</label>
+      <labrl Class="item-footer">copyright © <span id="anos"></span> - Arthur Santos  <a href="https://discord.gg/AGqhqrhE8d" target="_blank"><i class="fab fa-discord"></i><span></span></a></label>
+     </div>
+    </div>
+  </footer>
+  <script>
+    const anoatual = document.getElementById('anos');
+    const qualano = new Date();
+    anoatual.innerHTML = qualano.getFullYear();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+#netflixCoverSection{
+    z-index: 3;
+    position: fixed;
+    background-color: #070700;
+    width: 100vw;
+    height: 100vh;
+}
+#netflixCoverConteiner{
+    color: red;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+#coverH1, #coverH2{
+    text-align: center;
+}
+#coverH1{
+    margin-bottom: 50px;
+    font-size: 10vw;
+}
+#coverH2{
+    margin-top: 50px;
+    font-size: 2rem;
+    font-weight: 100;
+}
+#coverloading{
+    border-top: 1px solid #fcfcfcfc;
+    border-right: 1px solid #fcfcfcfc;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    animation: 6s loading infinite;
+}
+
+@keyframes loading {
+    to{
+        transform: rotate(6turn);
+    }
+}

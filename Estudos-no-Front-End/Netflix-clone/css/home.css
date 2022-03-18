@@ -1,0 +1,73 @@
+#Header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+#navBar{
+  display: flex;
+}
+#menuNav ul{
+  display: flex;
+}
+#menuNav ul li{
+  padding: 10px;
+}
+#menuNav ul li:hover,
+#menuNav ul li:focus, 
+i:hover,
+i:focus{
+  background-color: rgba(255, 255, 255, .1);
+  opacity: 50%;
+}
+#logoHeader {
+  height: 0.8rem;
+  margin: 1rem;
+}
+#cabecalhoPerfil {
+  display: flex;
+  align-items: center;
+}
+#perfilLogo {
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.itemPerfil {
+  padding: 10px;
+}
+#homeBanner {
+  width: 100%;
+  height: 100%;
+}
+#bannerHome {
+  width: 100%;
+  height: 500px;
+}
+#conteudoMain {
+  display: flex;
+  flex-direction: column;
+}
+.capasFilmes {
+  object-fit: cover;
+  height: 250px;
+  width: 150px;
+  margin-right: 5px;
+}
+.capasFilmes2 {
+  object-fit: cover;
+  height: 100px;
+  width: 180px;
+  margin-right: 5px;
+}
+#conteudoMain{
+    width: 100%;
+    overflow: hidden;
+}
+.Filmes {
+    display: flex;
+    flex-flow:column nowrap;
+    overflow: hidden;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    width: 5000%;
+}
