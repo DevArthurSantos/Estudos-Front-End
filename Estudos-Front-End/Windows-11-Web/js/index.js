@@ -2,58 +2,74 @@ window.onload = function () {
   alert(
     'Para uma melhor experiência antes de clicar em "OK" acione "F11" para a visualização em FullScreen.'
   );
-  const aside = document.querySelector("#portfolioOpen");
+  const aside = document.getElementById("portfolioOpen");
   aside.classList.toggle("ativoP");
-  
+
   setInterval(myTimer, 4000);
   function myTimer() {
-    document.querySelector("#ConteinerLoad").style.display = "none";
+    document.getElementById("ConteinerLoad").style.display = "none";
   }
 };
 
-const internetE = document.querySelector("#internetE");
+const internetE = document.getElementById("internetE");
 internetE.addEventListener("click", () => {
-  document.querySelector("#erro").style.display = "block";
+  document.getElementById("erro").style.display = "block";
 
   setInterval(myTimer, 2500);
   function myTimer() {
-    document.querySelector("#erroGif").style.display = "block";
+    document.getElementById("erroGif").style.display = "block";
   }
 });
-
-const powerShel = document.querySelector("#powerShel");
-powerShel.addEventListener("click", () => {
-  document.querySelector("#powerShelGif").style.display = "block";
-
-  setInterval(myTimer, 3000);
-  function myTimer() {
-    document.querySelector("#powerShelGif").style.display = "none";
-  }
+const terminalTopClosed = document.getElementById("terminalTopClosed");
+terminalTopClosed.addEventListener("click", () => {
+  document.getElementById("terminal").style.display = "none";
+});
+const terminal = document.getElementById("powerShel");
+terminal.addEventListener("click", () => {
+  document.getElementById("terminal").style.display = "block";
 });
 
-const gitHub = document.querySelector("#gitHub");
+const gitHub = document.getElementById("gitHub");
 gitHub.addEventListener("click", () => {
   window.open("https://github.com/DevArthurSantos");
 });
 
-const asideClick = document.querySelector("#menu");
+const asideClick = document.getElementById("menu");
 asideClick.addEventListener("click", () => {
-  const aside = document.querySelector("#aside");
+  const aside = document.getElementById("aside");
   aside.classList.toggle("ativo");
 });
 
-const EdgeClick = document.querySelector("#Edge");
+const EdgeClick = document.getElementById("Edge");
 EdgeClick.addEventListener("click", () => {
-  const Edge = document.querySelector("#portfolioOpen");
+  const Edge = document.getElementById("portfolioOpen");
   Edge.classList.toggle("ativoP");
 });
-const EdgeClick2 = document.querySelector("#EdgeBar");
+const EdgeClick2 = document.getElementById("EdgeBar");
 EdgeClick2.addEventListener("click", () => {
-  const EdgeHot = document.querySelector("#portfolioOpen");
+  const EdgeHot = document.getElementById("portfolioOpen");
   EdgeHot.classList.toggle("ativoP");
 });
 
+const input = document.getElementById("comando");
+const comandoRes = document.getElementById("executionP");
+const help =
+  "<p> sobre: informações do criador do terminal. <br> help: lists de comandos. <br> clear: limpa o terminal</p>";
+const newTerminal = document.getElementById("terminalContentInput");
 
+input.addEventListener("change", (event) => {
+  event.preventDefault;
+  let comando = input.value.toLowerCase();
 
-
-
+  if (comando === "help") {
+    comandoRes.innerHTML = help + "<br>" + newTerminal.innerHTML;
+  } else if (comando === "sobre") {
+    comandoRes.innerHTML = "<p>Arthur Dos Santos</p>" + newTerminal.innerHTML;
+  } else if (comando === "clear") {
+    comandoRes.innerHTML = "<p></p>";
+  } else {
+    comandoRes.innerHTML =
+      '<p style="color: red"> Comando invalido utilize help para mais informações.</p>' +
+      newTerminal.innerHTML;
+  }
+});
